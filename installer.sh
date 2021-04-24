@@ -45,7 +45,7 @@ elif [ ${1} = "clear" ]; then
         else
             echo "==> No leftovers left"
     fi
-    if [ -f bin/lpcalc ]; then
+    if [ -f ../bin/lpcalc ]; then
         for bin_file in ../bin/*; do
             echo "==> Found binary file: ${bin_file}"
             echo "    -> Removing binary file: ${bin_file}..."
@@ -56,7 +56,7 @@ elif [ ${1} = "clear" ]; then
             echo "==> No binary files left"
     fi
 elif [ ${1} = "install" ]; then
-    if [ -f bin/lpcalc ]; then
+    if [ -f ../bin/lpcalc ]; then
         if [ ! -f /usr/local/bin/lpcalc ]; then
             if [ -f /usr/bin/sudo ]; then
                 echo "==> Installing to: /usr/local/bin/lpcalc..."
